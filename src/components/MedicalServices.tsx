@@ -125,7 +125,7 @@ const MedicalServices = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
+            className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">
@@ -135,7 +135,7 @@ const MedicalServices = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
                     <Heart className="w-8 h-8" />
                   </div>
                   <div>
-                    <h1 className="text-4xl font-bold">Medical Services</h1>
+                    <h1 className="tracking-tighter text-white font-sans text-4xl font-bold">Medical Services</h1>
                     <p className="text-white/90 text-lg">24-hour medical facility for students, staff, and dependents</p>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ const MedicalServices = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.9, opacity: 0 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+                  className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
                 >
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4">

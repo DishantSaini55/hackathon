@@ -1,0 +1,134 @@
+{
+  "subjects": [
+    {
+      "subject": "Mathematics-1",
+      "syllabus": "FCMT0101_Mathematics-1",
+      "books": ["Jaggi Mathur"],
+      "units": {
+        "Unit-1": "Hyperbolic Functions",
+        "Unit-2": "Successive Differentiation",
+        "Unit-3": "Application of Integrals, Gamma & Beta Functions",
+        "Unit-4": "Multiple Integrals",
+        "Unit-5": "Infinite Series, Maclaurin's and Taylor's Theorem"
+      },
+      "notes": ["https://drive.google.com/drive/folders/example_math_notes"],
+      "playlists": ["https://www.youtube.com/playlist?list=example_math_playlist"],
+      "tutorial_sheets": {
+        "Tut-1": "Limit, Continuity, Differentiability, Hyperbolic functions",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_tut1_sol",
+        "Tut-2": "Successive Differentiation, Taylor/Maclaurin Series",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_tut2_sol"
+      },
+      "practical_files": ["https://drive.google.com/drive/folders/example_math_practical"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_math_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_math_endsem"
+      },
+      "extra_resources": ["Revision Notes", "Short Notes PDF"]
+    },
+    {
+      "subject": "English",
+      "syllabus": "FCEN0101_English",
+      "books": ["Technical Communication by Meenakshi Raman"],
+      "units": {
+        "Unit-1": "Introduction to Technical Communication",
+        "Unit-2": "Grammar and Usage",
+        "Unit-3": "Technical Writing",
+        "Unit-4": "Presentation Skills",
+        "Unit-5": "Group Discussion and Interview Skills"
+      },
+      "notes": ["https://drive.google.com/drive/folders/example_english_notes"],
+      "playlists": ["https://www.youtube.com/playlist?list=example_english_playlist"],
+      "tutorial_sheets": {
+        "Tut-1": "Grammar and Comprehension",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_eng_tut1_sol",
+        "Tut-2": "Letter Writing and Technical Reports",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_eng_tut2_sol"
+      },
+      "practical_files": ["N/A"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_english_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_english_endsem"
+      },
+      "extra_resources": ["Communication Skills PDF", "Common Errors in English"]
+    },
+    {
+      "subject": "Data Structures and Algorithms",
+      "syllabus": "FCCT0201_DSA",
+      "books": ["Introduction to Algorithms by CLRS", "Data Structures Using C by Reema Thareja"],
+      "units": {
+        "Unit-1": "Introduction to Data Structures and Algorithms",
+        "Unit-2": "Arrays, Linked Lists, Stacks and Queues",
+        "Unit-3": "Trees and Graphs",
+        "Unit-4": "Searching and Sorting Algorithms",
+        "Unit-5": "Algorithm Design Techniques"
+      },
+      "notes": ["https://drive.google.com/drive/folders/example_dsa_notes"],
+      "playlists": ["https://www.youtube.com/playlist?list=example_dsa_playlist"],
+      "tutorial_sheets": {
+        "Tut-1": "Arrays and Linked Lists Problems",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_dsa_tut1_sol",
+        "Tut-2": "Trees and Graph Algorithms",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_dsa_tut2_sol",
+        "Tut-3": "Sorting and Searching Algorithms",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_dsa_tut3_sol"
+      },
+      "practical_files": ["https://drive.google.com/drive/folders/example_dsa_practical"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_dsa_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_dsa_endsem"
+      },
+      "extra_resources": ["DSA Cheat Sheet", "Competitive Programming Resources", "Time Complexity Analysis Guide"]
+    },
+    {
+      "subject": "Computer Programming",
+      "syllabus": "FCCT0101_Computer_Programming",
+      "books": ["Let Us C by Yashavant Kanetkar", "The C Programming Language by Kernighan and Ritchie"],
+      "units": {
+        "Unit-1": "Basics of Programming and C",
+        "Unit-2": "Control Structures and Functions",
+        "Unit-3": "Arrays and Strings",
+        "Unit-4": "Pointers and Dynamic Memory Allocation",
+        "Unit-5": "Structures, Unions and File Handling"
+      },
+      "notes": ["https://drive.google.com/drive/folders/example_cp_notes"],
+      "playlists": ["https://www.youtube.com/playlist?list=example_cp_playlist"],
+      "tutorial_sheets": {
+        "Tut-1": "Basic C Programs",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_cp_tut1_sol",
+        "Tut-2": "Arrays and Functions",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_cp_tut2_sol"
+      },
+      "practical_files": ["https://drive.google.com/drive/folders/example_cp_practical"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_cp_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_cp_endsem"
+      },
+      "extra_resources": ["C Programming Handbook", "Common C Programming Errors", "Programming Exercises"]
+    },
+    {
+      "subject": "Environmental Science",
+      "syllabus": "FCEN0102_Environmental_Science",
+      "books": ["Environmental Studies by Erach Bharucha"],
+      "units": {
+        "Unit-1": "Introduction to Environmental Studies",
+        "Unit-2": "Ecosystems and Biodiversity",
+        "Unit-3": "Environmental Pollution",
+        "Unit-4": "Social Issues and the Environment",
+        "Unit-5": "Human Population and the Environment"
+      },
+      "notes": ["https://drive.google.com/drive/folders/example_es_notes"],
+      "playlists": ["https://www.youtube.com/playlist?list=example_es_playlist"],
+      "tutorial_sheets": {
+        "Tut-1": "Ecosystem Analysis",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_es_tut1_sol"
+      },
+      "practical_files": ["https://drive.google.com/drive/folders/example_es_practical"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_es_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_es_endsem"
+      },
+      "extra_resources": ["Environmental Case Studies", "Environmental Awareness Projects"]
+    }
+  ]
+}

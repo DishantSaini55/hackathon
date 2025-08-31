@@ -402,31 +402,7 @@ const MagicalGenie = () => {
         ))}
       </div>
 
-      {/* Welcome message */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
-        className="mt-8 text-center"
-      >
-        <motion.div
-          animate={{ 
-            scale: [1, 1.05, 1],
-          }}
-          transition={{ 
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="bg-gradient-to-r from-gold-500 to-gold-600 px-8 py-4 rounded-full shadow-xl inline-block"
-        >
-          <div className="flex items-center gap-3 text-white font-bold text-lg">
-            <Sparkles className="w-6 h-6" />
-            Welcome to NSUT Campus Genie!
-            <Sparkles className="w-6 h-6" />
-          </div>
-        </motion.div>
-      </motion.div>
+      {/* Welcome message removed */}
     </div>
   )
 }

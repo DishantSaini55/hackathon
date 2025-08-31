@@ -1,58 +1,63 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Instagram, Linkedin, Mail } from 'lucide-react'
 
 const Team = () => {
   const teamMembers = [
     {
       name: 'Dishant',
-      role: 'DEVELOPER',
-      image: '/DISHANT1.jpg', // Using Dishant's preferred photo
+      // role: 'FULLSTACK DEVELOPER',
+      image: '/Dishu.jpg', // Using Dishant's preferred photo
       bio: 'Third year ECE student passionate about full-stack development and campus innovation.',
       social: {
-        github: '#', // Add GitHub link when available
-        linkedin: '#',
-        email: 'dishant@nsut.ac.in'
+        instagram: 'https://www.instagram.com/dishantsaini55/', // Add Instagram link when available
+        linkedin: 'https://www.linkedin.com/in/dishant-saini-557829293/',
+        email: 'dishantsaini2903@gmail.com'
       }
     },
     {
       name: 'Rohit',
-      role: 'DEVELOPER',
+      // role: 'FRONTEND DEVELOPER',
       image: '/ROHIT.jpg', // Using Rohit's actual photo
-      bio: 'Backend specialist focused on robust and scalable campus solutions.',
-      social: {
-        github: '#', // Add GitHub link when available
-        linkedin: '#',
-        email: 'rohit@nsut.ac.in'
+      bio: 'Frontend specialist and creative designer, building robust and scalable campus solutions with modern UI/UX.',
+      social: { 
+        instagram: 'https://www.instagram.com/hr__rohit/', // Add Instagram link when available
+        linkedin: 'https://www.linkedin.com/in/rohit-verma-9981072ba/',
+        email: 'rohitverma343536@gmail.com'
       }
     },
     {
       name: 'Nishant',
-      role: 'DEVELOPER',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400', // Placeholder image
-      bio: 'Frontend developer creating intuitive user experiences for campus applications.',
+      // role: 'FULLSTACK DEVELOPER',
+      image: '/Nishu.jpg', // Placeholder image
+      bio: 'Full stack developer and map specialist skilled in building end-to-end web solutions with interactive geolocation features.',
       social: {
-        github: '#', // Add GitHub link when available
-        linkedin: '#',
-        email: 'nishant@nsut.ac.in'
+        instagram: 'https://www.instagram.com/nishant.offi/', // Add Instagram link when available
+        linkedin: 'https://www.linkedin.com/in/nishant-raj-nsut27/',
+        email: 'nishantraj30488@gmail.com'
       }
     },
     {
       name: 'Shubham',
-      role: 'DEVELOPER',
-      image: '/SHUBHAM.jpg', // Using Shubham's actual photo
-      bio: 'Creative designer focused on making campus navigation simple and beautiful.',
+      // role: 'FRONTEND DEVELOPER',
+      image: '/Shubhu.jpg', // Using Shubham's actual photo
+      bio: 'Frontend developer and data collector with expertise in Canva, delivering scalable solutions with clean design and impactful visuals.',
       social: {
-        github: '#', // Add GitHub link when available
-        linkedin: '#',
-        email: 'shubham@nsut.ac.in'
+        instagram: 'https://www.instagram.com/viper.charlie/', // Add Instagram link when available
+        linkedin: 'https://www.linkedin.com/in/shubham-prakash-708714294/',
+        email: 'vipercharlie2@gmail.com'
       }
     }
   ]
 
   return (
-    <section id="team" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="team" className="py-16 lg:py-24 bg-black relative overflow-hidden">
+      {/* Floating gradient blobs */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute bottom-0 -right-20 w-72 h-72 bg-purple-600 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-amber-500 rounded-full blur-3xl opacity-15"></div>
+      
+      <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,10 +65,13 @@ const Team = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Meet the team
+          <h2 className="tracking-tighter text-white font-sans text-4xl sm:text-5xl md:text-6xl mb-6">
+            Meet the{' '}
+            <span className="block font-serif text-5xl sm:text-6xl md:text-7xl italic text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+              team
+            </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="font-sans text-lg font-normal leading-8 text-gray-400 max-w-3xl mx-auto">
             Meet the students who've lived it, struggled through it, and now want to fix it.
           </p>
         </motion.div>
@@ -72,88 +80,82 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="card p-6 text-center group"
+              className="relative overflow-hidden rounded-2xl border border-white/10 shadow-lg backdrop-blur-xl bg-white/5 group hover:shadow-2xl transition-all duration-300 min-h-[420px]"
             >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="relative mb-6"
-              >
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-xl">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    style={{ 
-                      objectPosition: member.name === 'Dishant' ? 'center 30%' : 'center center',
-                      objectFit: 'cover'
-                    }}
-                  />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-600/20 blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              
+              <div className="relative z-10 p-6 text-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="relative mb-6"
+                >
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-white/20 shadow-xl">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      style={{ 
+                        objectPosition: member.name === 'Dishant' ? 'center 30%' : 'center center',
+                        objectFit: 'cover'
+                      }}
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </motion.div>
+
+                <h3 className="text-xl font-bold text-white mb-2 drop-shadow-md">
+                  {member.name}
+                </h3>
+                
+                <p className="text-cyan-400 font-semibold mb-3">
+                  {/* {member.role} */}
+                </p>
+                
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  {member.bio}
+                </p>
+
+                <div className="flex justify-center space-x-3">
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={member.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200 backdrop-blur-xl border border-white/20"
+                  >
+                    <Instagram className="w-4 h-4 text-white" />
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={member.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200 backdrop-blur-xl border border-white/20"
+                  >
+                    <Linkedin className="w-4 h-4 text-white" />
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={`mailto:${member.social.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200 backdrop-blur-xl border border-white/20"
+                  >
+                    <Mail className="w-4 h-4 text-white" />
+                  </motion.a>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-genie-500/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </motion.div>
-
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {member.name}
-              </h3>
-              
-              <p className="text-genie-600 font-semibold mb-3">
-                {member.role}
-              </p>
-              
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                {member.bio}
-              </p>
-
-              <div className="flex justify-center space-x-3">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={member.social.github}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200"
-                >
-                  <Github className="w-4 h-4 text-gray-600" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={member.social.linkedin}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200"
-                >
-                  <Linkedin className="w-4 h-4 text-gray-600" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={`mailto:${member.social.email}`}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200"
-                >
-                  <Mail className="w-4 h-4 text-gray-600" />
-                </motion.a>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary"
-          >
-            See all team
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )

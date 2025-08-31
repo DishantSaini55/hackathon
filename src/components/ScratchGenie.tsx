@@ -350,21 +350,7 @@ const ScratchGenie = () => {
           </motion.div>
         )}
 
-        {/* Success message */}
-        {isScratched && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-            className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-gold-500 to-gold-600 px-6 py-3 rounded-full shadow-xl"
-          >
-            <div className="flex items-center gap-2 text-white font-semibold">
-              <Sparkles className="w-5 h-5" />
-              Welcome to NSUT Campus Genie!
-              <Sparkles className="w-5 h-5" />
-            </div>
-          </motion.div>
-        )}
+        {/* Success message removed */}
       </div>
     </div>
   )

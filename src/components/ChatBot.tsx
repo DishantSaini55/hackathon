@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle, X, Send, Sparkles, Mic } from 'lucide-react'
+import { X, Send, Sparkles, Mic } from 'lucide-react'
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -193,18 +193,40 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-genie-500 to-magic-500 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 ${
-          isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        }`}
-      >
-        <MessageCircle className="w-8 h-8" />
-        <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-      </motion.button>
+      {/* Chat Button with ASK GENIE style similar to ASK EVA - Increased Size */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsOpen(true)}
+          className={`flex flex-col items-center transition-all duration-300 ${
+            isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          }`}
+        >
+          {/* Circular blue background with genie */}
+          <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center shadow-xl relative overflow-hidden">
+            {/* Add light blue inner ring */}
+            <div className="absolute inset-0 border-[4px] border-blue-300/30 rounded-full"></div>
+            
+            {/* Add decorative dots/arrows like in the example */}
+            <div className="absolute w-1.5 h-1.5 bg-white rounded-full top-4 left-4"></div>
+            <div className="absolute w-1.5 h-1.5 bg-white rounded-full bottom-4 right-4"></div>
+            <div className="absolute w-9 h-[1.5px] bg-blue-300/70 rotate-45 top-4 right-4"></div>
+            <div className="absolute w-9 h-[1.5px] bg-blue-300/70 -rotate-45 bottom-4 right-4"></div>
+            
+            <img 
+              src="/genie-svgrepo-com.svg" 
+              alt="Genie Chat" 
+              className="w-16 h-16 drop-shadow-xl relative z-10" 
+            />
+          </div>
+          
+          {/* ASK GENIE text label */}
+          <div className="bg-blue-800 text-white text-sm font-bold py-1.5 px-5 rounded tracking-wide shadow-md mt-2">
+            ASK GENIE
+          </div>
+        </motion.button>
+      </div>
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -219,7 +241,11 @@ const ChatBot = () => {
             <div className="bg-gradient-to-r from-genie-500 to-magic-500 p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-white" />
+                  <img 
+                    src="/genie-svgrepo-com.svg" 
+                    alt="Genie Chat" 
+                    className="w-6 h-6 text-white" 
+                  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Campus Genie</h3>

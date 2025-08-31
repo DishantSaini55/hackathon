@@ -161,7 +161,7 @@ const HostelInformation = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
+            className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-green-500 to-teal-500 p-6 text-white">
@@ -171,7 +171,7 @@ const HostelInformation = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                     <Building className="w-8 h-8" />
                   </div>
                   <div>
-                    <h1 className="text-4xl font-bold">Hostel Information</h1>
+                    <h1 className="tracking-tighter text-white font-sans text-4xl font-bold">Hostel Information</h1>
                     <p className="text-white/90 text-lg">Hostel Office & Warden Contacts</p>
                   </div>
                 </div>
@@ -283,7 +283,7 @@ const HostelInformation = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.9, opacity: 0 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+                  className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
                 >
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4">

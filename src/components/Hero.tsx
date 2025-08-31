@@ -15,49 +15,39 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-genie-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-magic-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-128 h-128 bg-gold-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
+    <section id="home" className="py-16 lg:py-24 bg-black relative overflow-hidden min-h-screen flex items-center">
+      {/* Floating gradient blobs */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-1/2 -right-20 w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-amber-500 rounded-full blur-3xl opacity-15"></div>
+      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-fuchsia-500 rounded-full blur-3xl opacity-10"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left lg:text-left"
+            className="text-left"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6"
-            >
-              <Sparkles className="w-4 h-4 text-gold-400 mr-2" />
-              <span className="text-white/90 text-sm font-medium">Your AI Campus Companion</span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-5xl lg:text-7xl font-bold mb-6"
+              className="tracking-tighter text-white font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6"
             >
-              <span className="text-white">NSUT</span>
-              <br />
-              <span className="text-gradient">Campus Genie</span>
+              NSUT{' '}
+              <span className="block font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                Campus Genie
+              </span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-xl text-white/80 mb-8 leading-relaxed"
+              className="font-sans text-lg font-normal leading-8 text-gray-400 max-w-lg mb-8"
             >
               Your complete guide to NSUT's campus. Access maps, resources, events, and connect with fellow students all in one AI-powered platform.
             </motion.p>
@@ -72,16 +62,20 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('features')}
-                className="btn-primary group"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 text-white font-semibold shadow-2xl transition-all duration-300 hover:shadow-cyan-500/25"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </motion.button>
+              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('map')}
-                className="btn-secondary"
+                className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl px-8 py-4 text-white font-semibold hover:bg-white/20 transition-all duration-300"
               >
                 Explore Features
               </motion.button>
@@ -94,15 +88,15 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 1 }}
               className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20"
             >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">10K+</div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-white">100+</div>
                 <div className="text-white/60 text-sm">Active Users</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">50+</div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-white">2+</div>
                 <div className="text-white/60 text-sm">Campus Locations</div>
               </div>
-              <div className="text-center">
+              <div className="text-center lg:text-left">
                 <div className="text-2xl font-bold text-white">24/7</div>
                 <div className="text-white/60 text-sm">AI Support</div>
               </div>
@@ -116,7 +110,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative flex justify-center items-center"
           >
-            <MagicalGenie />
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-lg backdrop-blur-xl bg-white/5 p-8 group hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-600/20 blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <div className="relative z-10">
+                <MagicalGenie />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

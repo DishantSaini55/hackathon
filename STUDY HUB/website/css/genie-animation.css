@@ -1,0 +1,106 @@
+/* Genie Animation CSS */
+@keyframes genie-appear {
+    0% { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.8);
+    }
+    40% { 
+        opacity: 1; 
+        transform: translateY(-10px) scale(1.05);
+    }
+    60% { 
+        transform: translateY(5px) scale(0.98);
+    }
+    80% { 
+        transform: translateY(-2px) scale(1.02);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes genie-float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(10px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes genie-glow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(76, 29, 149, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.8));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(76, 29, 149, 0.4));
+    }
+}
+
+.logo img, .footer-logo img, .hero-image img {
+    animation: genie-appear 1.5s ease-out forwards, 
+               genie-float 6s ease-in-out infinite 1.5s,
+               genie-glow 4s ease-in-out infinite 2s;
+    will-change: transform, opacity, filter;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-genie {
+    opacity: 0; /* Start invisible */
+    animation: genie-appear 1.5s ease-out forwards, 
+               genie-float 6s ease-in-out infinite 1.5s,
+               genie-glow 4s ease-in-out infinite 2s;
+    will-change: transform, opacity, filter;
+    transform-origin: center;
+}
+
+/* EXPLICITLY PREVENT ANIMATION ON GENIE TEXT */
+.hero h1 span {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    will-change: auto !important;
+}/* IntersectionObserver class to trigger animation when element is in view */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.8s ease;
+    transform: translateY(20px);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modern hover effects for logo */
+.logo:hover img, .footer-logo:hover img {
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.8));
+    transform: scale(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Apply special genie animations to specific images */
+.dsa-image img, .brahmastra-image img {
+    transition: all 0.5s ease;
+}
+
+.dsa-image:hover img, .brahmastra-image:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.5));
+}

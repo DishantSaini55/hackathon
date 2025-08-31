@@ -1,0 +1,422 @@
+{
+  "subjects": [
+    {
+      "subject": "Mathematics-1",
+      "syllabus": "FCMT0101_Mathematics-1",
+      "books": ["Jaggi Mathur", "G.B. Thomas", "Kreyszig"],
+      "units": {
+        "Unit-1": "Hyperbolic Functions",
+        "Unit-2": "Successive Differentiation",
+        "Unit-3": "Application of Integrals, Gamma & Beta Functions",
+        "Unit-4": "Multiple Integrals",
+        "Unit-5": "Infinite Series, Maclaurin's and Taylor's Theorem"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_math_notes1",
+        "https://drive.google.com/drive/folders/example_math_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_math_playlist1",
+        "https://www.youtube.com/playlist?list=example_math_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Limit, Continuity, Differentiability, Hyperbolic functions",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_tut1_sol",
+        "Tut-2": "Successive Differentiation, Taylor/Maclaurin Series",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_tut2_sol",
+        "Tut-3": "Applications of Integrals",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_math_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_math_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_math_endsem"
+      },
+      "extra_resources": [
+        "Revision Notes", 
+        "Short Notes PDF", 
+        "Formula Sheet", 
+        "One-shot revision video"
+      ]
+    },
+    {
+      "subject": "Mathematics-2",
+      "syllabus": "FCMT0102_Mathematics-2",
+      "books": ["Jaggi Mathur", "B.S. Grewal", "Kreyszig"],
+      "units": {
+        "Unit-1": "First Order Differential Equations",
+        "Unit-2": "Linear Differential Equations of Higher Order",
+        "Unit-3": "Laplace Transforms",
+        "Unit-4": "Fourier Series",
+        "Unit-5": "Vector Calculus"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_math2_notes1",
+        "https://drive.google.com/drive/folders/example_math2_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_math2_playlist1",
+        "https://www.youtube.com/playlist?list=example_math2_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "First Order Differential Equations",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_m2_tut1_sol",
+        "Tut-2": "Higher Order Differential Equations",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_m2_tut2_sol",
+        "Tut-3": "Laplace and Fourier Series",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_m2_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_math2_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_math2_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_math2_endsem"
+      },
+      "extra_resources": [
+        "Revision Notes", 
+        "Short Notes PDF", 
+        "Formula Sheet", 
+        "Numerical Methods Practice Problems"
+      ]
+    },
+    {
+      "subject": "English",
+      "syllabus": "FCEN0101_English",
+      "books": ["Technical Communication by Meenakshi Raman", "Better English by Norman Lewis"],
+      "units": {
+        "Unit-1": "Introduction to Technical Communication",
+        "Unit-2": "Grammar and Usage",
+        "Unit-3": "Technical Writing",
+        "Unit-4": "Presentation Skills",
+        "Unit-5": "Group Discussion and Interview Skills"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_english_notes1",
+        "https://drive.google.com/drive/folders/example_english_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_english_playlist"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Grammar and Comprehension",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_eng_tut1_sol",
+        "Tut-2": "Letter Writing and Technical Reports",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_eng_tut2_sol"
+      },
+      "practical_files": ["N/A"],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_english_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_english_endsem"
+      },
+      "extra_resources": [
+        "Communication Skills PDF", 
+        "Common Errors in English",
+        "Technical Writing Samples"
+      ]
+    },
+    {
+      "subject": "Data Structures and Algorithms",
+      "syllabus": "FCCT0201_DSA",
+      "books": [
+        "Introduction to Algorithms by CLRS", 
+        "Data Structures Using C by Reema Thareja",
+        "Algorithms by Robert Sedgewick"
+      ],
+      "units": {
+        "Unit-1": "Introduction to Data Structures and Algorithms",
+        "Unit-2": "Arrays, Linked Lists, Stacks and Queues",
+        "Unit-3": "Trees and Graphs",
+        "Unit-4": "Searching and Sorting Algorithms",
+        "Unit-5": "Algorithm Design Techniques"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_dsa_notes1",
+        "https://drive.google.com/drive/folders/example_dsa_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_dsa_playlist1",
+        "https://www.youtube.com/playlist?list=example_dsa_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Arrays and Linked Lists Problems",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_dsa_tut1_sol",
+        "Tut-2": "Trees and Graph Algorithms",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_dsa_tut2_sol",
+        "Tut-3": "Sorting and Searching Algorithms",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_dsa_tut3_sol",
+        "Tut-4": "Dynamic Programming",
+        "Tut-4_Solution": "https://drive.google.com/drive/folders/example_dsa_tut4_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_dsa_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_dsa_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_dsa_endsem"
+      },
+      "extra_resources": [
+        "DSA Cheat Sheet", 
+        "Competitive Programming Resources", 
+        "Time Complexity Analysis Guide",
+        "Leetcode Practice Problems",
+        "Interview Preparation Guide"
+      ]
+    },
+    {
+      "subject": "Computer Programming",
+      "syllabus": "FCCT0101_Computer_Programming",
+      "books": [
+        "Let Us C by Yashavant Kanetkar", 
+        "The C Programming Language by Kernighan and Ritchie"
+      ],
+      "units": {
+        "Unit-1": "Basics of Programming and C",
+        "Unit-2": "Control Structures and Functions",
+        "Unit-3": "Arrays and Strings",
+        "Unit-4": "Pointers and Dynamic Memory Allocation",
+        "Unit-5": "Structures, Unions and File Handling"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_cp_notes1",
+        "https://drive.google.com/drive/folders/example_cp_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_cp_playlist1",
+        "https://www.youtube.com/playlist?list=example_cp_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Basic C Programs",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_cp_tut1_sol",
+        "Tut-2": "Arrays and Functions",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_cp_tut2_sol",
+        "Tut-3": "Pointers and Memory Management",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_cp_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_cp_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_cp_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_cp_endsem"
+      },
+      "extra_resources": [
+        "C Programming Handbook", 
+        "Common C Programming Errors", 
+        "Programming Exercises",
+        "Debugging Techniques"
+      ]
+    },
+    {
+      "subject": "Environmental Science",
+      "syllabus": "FCEN0102_Environmental_Science",
+      "books": [
+        "Environmental Studies by Erach Bharucha",
+        "Environmental Science: Towards a Sustainable Future by Richard Wright"
+      ],
+      "units": {
+        "Unit-1": "Introduction to Environmental Studies",
+        "Unit-2": "Ecosystems and Biodiversity",
+        "Unit-3": "Environmental Pollution",
+        "Unit-4": "Social Issues and the Environment",
+        "Unit-5": "Human Population and the Environment"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_es_notes1",
+        "https://drive.google.com/drive/folders/example_es_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_es_playlist"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Ecosystem Analysis",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_es_tut1_sol",
+        "Tut-2": "Environmental Pollution Case Studies",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_es_tut2_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_es_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_es_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_es_endsem"
+      },
+      "extra_resources": [
+        "Environmental Case Studies", 
+        "Environmental Awareness Projects",
+        "Sustainable Development Goals"
+      ]
+    },
+    {
+      "subject": "Digital Logic Design",
+      "syllabus": "FCCT0202_Digital_Logic_Design",
+      "books": [
+        "Digital Design by Morris Mano",
+        "Digital Logic and Computer Design by M. Morris Mano"
+      ],
+      "units": {
+        "Unit-1": "Number Systems and Boolean Algebra",
+        "Unit-2": "Combinational Logic Circuits",
+        "Unit-3": "Sequential Logic Circuits",
+        "Unit-4": "Memory and Programmable Logic Devices",
+        "Unit-5": "Computer Organization"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_dld_notes1",
+        "https://drive.google.com/drive/folders/example_dld_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_dld_playlist1",
+        "https://www.youtube.com/playlist?list=example_dld_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Boolean Algebra and Logic Gates",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_dld_tut1_sol",
+        "Tut-2": "Combinational Circuits",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_dld_tut2_sol",
+        "Tut-3": "Sequential Circuits",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_dld_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_dld_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_dld_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_dld_endsem"
+      },
+      "extra_resources": [
+        "Logic Design Cheat Sheet", 
+        "Digital Circuit Simulator Links", 
+        "VHDL/Verilog Resources"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "syllabus": "FCPH0101_Physics",
+      "books": [
+        "Concepts of Physics by H.C. Verma",
+        "University Physics by Young and Freedman"
+      ],
+      "units": {
+        "Unit-1": "Oscillations and Waves",
+        "Unit-2": "Optics",
+        "Unit-3": "Electromagnetism",
+        "Unit-4": "Quantum Physics",
+        "Unit-5": "Modern Physics and Applications"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_physics_notes1",
+        "https://drive.google.com/drive/folders/example_physics_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_physics_playlist1",
+        "https://www.youtube.com/playlist?list=example_physics_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Oscillations and Waves Problems",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_phy_tut1_sol",
+        "Tut-2": "Optics Problems",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_phy_tut2_sol",
+        "Tut-3": "Electromagnetic Theory",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_phy_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_physics_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_physics_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_physics_endsem"
+      },
+      "extra_resources": [
+        "Physics Formula Sheet", 
+        "Virtual Lab Experiments", 
+        "Physics Numerical Practice"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "syllabus": "FCCH0101_Chemistry",
+      "books": [
+        "Engineering Chemistry by Jain and Jain",
+        "Physical Chemistry by P.W. Atkins"
+      ],
+      "units": {
+        "Unit-1": "Atomic and Molecular Structure",
+        "Unit-2": "Chemical Bonding",
+        "Unit-3": "Thermodynamics and Kinetics",
+        "Unit-4": "Electrochemistry",
+        "Unit-5": "Spectroscopy and Instrumental Methods"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_chem_notes1",
+        "https://drive.google.com/drive/folders/example_chem_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_chem_playlist"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "Atomic Structure and Chemical Bonding",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_chem_tut1_sol",
+        "Tut-2": "Thermodynamics Problems",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_chem_tut2_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_chem_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_chem_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_chem_endsem"
+      },
+      "extra_resources": [
+        "Chemistry Formula Sheet", 
+        "Periodic Table Guide", 
+        "Chemical Reaction Mechanisms"
+      ]
+    },
+    {
+      "subject": "Database Management Systems",
+      "syllabus": "FCCT0301_DBMS",
+      "books": [
+        "Database System Concepts by Silberschatz, Korth and Sudarshan",
+        "Database Management Systems by Raghu Ramakrishnan"
+      ],
+      "units": {
+        "Unit-1": "Introduction to Database Systems",
+        "Unit-2": "Entity-Relationship Model",
+        "Unit-3": "Relational Model and SQL",
+        "Unit-4": "Normalization and Database Design",
+        "Unit-5": "Transaction Management and Concurrency Control"
+      },
+      "notes": [
+        "https://drive.google.com/drive/folders/example_dbms_notes1",
+        "https://drive.google.com/drive/folders/example_dbms_notes2"
+      ],
+      "playlists": [
+        "https://www.youtube.com/playlist?list=example_dbms_playlist1",
+        "https://www.youtube.com/playlist?list=example_dbms_playlist2"
+      ],
+      "tutorial_sheets": {
+        "Tut-1": "ER Modeling and Relational Schema",
+        "Tut-1_Solution": "https://drive.google.com/drive/folders/example_dbms_tut1_sol",
+        "Tut-2": "SQL Queries",
+        "Tut-2_Solution": "https://drive.google.com/drive/folders/example_dbms_tut2_sol",
+        "Tut-3": "Normalization Exercises",
+        "Tut-3_Solution": "https://drive.google.com/drive/folders/example_dbms_tut3_sol"
+      },
+      "practical_files": [
+        "https://drive.google.com/drive/folders/example_dbms_practical"
+      ],
+      "previous_year_questions": {
+        "Midsem": "https://drive.google.com/drive/folders/example_dbms_midsem",
+        "Endsem": "https://drive.google.com/drive/folders/example_dbms_endsem"
+      },
+      "extra_resources": [
+        "SQL Cheat Sheet", 
+        "DBMS MCQs with Solutions", 
+        "Database Design Case Studies"
+      ]
+    }
+  ]
+}

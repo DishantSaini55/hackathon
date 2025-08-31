@@ -7,7 +7,8 @@ import {
   Clock, 
   MapPin, 
   User,
-  X
+  X,
+  Star
 } from 'lucide-react'
 
 interface Event {
@@ -181,17 +182,17 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
+            className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-genie-500 to-magic-500 p-6 text-white">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 text-white border-b border-white/10">
               <div className="flex items-center justify-between">
-                <h1 className="text-4xl font-bold">Event Board</h1>
+                <h1 className="tracking-tighter text-white font-sans text-4xl font-bold">Event Board</h1>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={onClose}
-                  className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-xl border border-white/20"
                 >
                   <X className="w-6 h-6" />
                 </motion.button>
@@ -203,12 +204,12 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => navigateMonth('prev')}
-                  className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-xl border border-white/20"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </motion.button>
                 
-                <div className="bg-red-400 px-6 py-2 rounded-full text-white font-semibold">
+                <div className="bg-gradient-to-r from-cyan-400 to-purple-600 px-6 py-2 rounded-full text-white font-semibold">
                   <Calendar className="w-5 h-5 inline mr-2" />
                   {monthNames[currentDate.getMonth()]}, {currentDate.getFullYear()}
                 </div>
@@ -217,7 +218,7 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => navigateMonth('next')}
-                  className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-xl border border-white/20"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </motion.button>
@@ -226,13 +227,6 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
             {/* Events Grid */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex space-x-4">
-                  <ChevronLeft className="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-600" />
-                  <ChevronRight className="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-600" />
-                </div>
-              </div>
-
               {/* Show events for August 2025, otherwise show "Want your event listed?" */}
               {currentDate.getMonth() === 7 && currentDate.getFullYear() === 2025 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -244,30 +238,33 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       whileHover={{ scale: 1.02 }}
                       onClick={() => setSelectedEvent(event)}
-                      className="bg-gray-800 text-white rounded-2xl p-6 cursor-pointer relative overflow-hidden"
+                      className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 cursor-pointer relative overflow-hidden group hover:bg-white/10 transition-all duration-300"
                     >
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      
                       {/* Date Badge */}
-                      <div className="absolute top-4 right-4 bg-yellow-500 text-black px-2 py-1 rounded-lg text-sm font-semibold">
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white px-2 py-1 rounded-lg text-sm font-semibold z-10">
                         {event.date}
                       </div>
 
                       {/* Event Title */}
-                      <h3 className="text-xl font-bold mb-4 mt-8 leading-tight">
+                      <h3 className="text-xl font-bold mb-4 mt-8 leading-tight text-white relative z-10">
                         {event.title}
                       </h3>
 
                       {/* Category Badge */}
-                      <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getCategoryColor(event.category)} text-white`}>
+                      <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getCategoryColor(event.category)} text-white relative z-10`}>
                         {event.category}
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-4">
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-4 relative z-10">
                         {event.description}
                       </p>
 
                       {/* Event Details */}
-                      <div className="space-y-2 text-sm text-gray-400">
+                      <div className="space-y-2 text-sm text-gray-400 relative z-10">
                         <div className="flex items-center">
                           <MapPin className="w-4 h-4 mr-2" />
                           <span>{event.venue}</span>
@@ -292,16 +289,16 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center max-w-2xl mx-auto"
                   >
-                    <h2 className="text-4xl font-bold text-gray-800 mb-6">
+                    <h2 className="tracking-tighter text-white font-sans text-4xl font-bold mb-6">
                       Want your event listed?
                     </h2>
-                    <p className="text-lg text-gray-600 mb-8">
+                    <p className="text-lg text-gray-400 mb-8">
                       Submit the form to get your event listed on the Event Board. (To be filled by Society POCs)
                     </p>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-red-400 hover:bg-red-500 text-white font-semibold px-8 py-3 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+                      className="bg-gradient-to-r from-cyan-400 to-purple-600 hover:from-cyan-300 hover:to-purple-500 text-white font-semibold px-8 py-3 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-xl"
                     >
                       Submit Event Form
                     </motion.button>
@@ -313,7 +310,7 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => navigateMonth('prev')}
-                      className="w-12 h-12 bg-yellow-400 hover:bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-300"
+                      className="w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 backdrop-blur-xl border border-white/20"
                     >
                       <ChevronLeft className="w-6 h-6" />
                     </motion.button>
@@ -324,7 +321,7 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => navigateMonth('next')}
-                      className="w-12 h-12 bg-yellow-400 hover:bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-300"
+                      className="w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 backdrop-blur-xl border border-white/20"
                     >
                       <ChevronRight className="w-6 h-6" />
                     </motion.button>
@@ -349,13 +346,13 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.9, opacity: 0 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+                  className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-2xl font-bold text-gray-800">{selectedEvent.title}</h2>
+                    <h2 className="tracking-tighter text-white font-sans text-2xl font-bold">{selectedEvent.title}</h2>
                     <button
                       onClick={() => setSelectedEvent(null)}
-                      className="p-2 hover:bg-gray-100 rounded-full"
+                      className="p-2 hover:bg-white/10 rounded-full backdrop-blur-xl border border-white/20 text-white transition-all duration-300"
                     >
                       <X className="w-5 h-5" />
                     </button>
@@ -365,20 +362,20 @@ const EventBoard = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     {selectedEvent.category}
                   </div>
                   
-                  <p className="text-gray-600 mb-6">{selectedEvent.description}</p>
+                  <p className="text-gray-300 mb-6">{selectedEvent.description}</p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <div className="font-semibold text-gray-800">Date & Time</div>
-                      <div className="text-gray-600">{selectedEvent.date} at {selectedEvent.time}</div>
+                      <div className="font-semibold text-white">Date & Time</div>
+                      <div className="text-gray-400">{selectedEvent.date} at {selectedEvent.time}</div>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-800">Venue</div>
-                      <div className="text-gray-600">{selectedEvent.venue}</div>
+                      <div className="font-semibold text-white">Venue</div>
+                      <div className="text-gray-400">{selectedEvent.venue}</div>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-800">Organizer</div>
-                      <div className="text-gray-600">{selectedEvent.organizer}</div>
+                      <div className="font-semibold text-white">Organizer</div>
+                      <div className="text-gray-400">{selectedEvent.organizer}</div>
                     </div>
                   </div>
                 </motion.div>

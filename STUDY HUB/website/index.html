@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub | Your Academic Genie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/testimonial-modern.css">
+    <link rel="stylesheet" href="css/genie-animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Times+New+Roman:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/mkc.png" alt="Study Hub Logo">
+                <h1>Study Hub</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#subjects" class="nav-link">Subjects</a>
+                <a href="#dsa" class="nav-link">DSA</a>
+                <a href="#brahmastra" class="nav-link">Brahmastra</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-orange"></div>
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Your Academic <span>Genie</span></h1>
+                <p>Unlock your academic potential with Study Hub's comprehensive resources. We're here to make your learning journey magical with curated materials designed for success!</p>
+                <div class="hero-buttons">
+                    <a href="#subjects" class="btn btn-primary">Explore Subjects</a>
+                    <a href="#brahmastra" class="btn btn-secondary">Brahmastra Resources</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="images/mkc.png" alt="Genie Study Helper">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Magical <span>Features</span></h2>
+                <p>Everything you need to excel in your studies</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Subject Resources</h3>
+                    <p>Comprehensive study materials for all subjects in your curriculum, organized by topic and difficulty level.</p>
+                </div>
+                <div class="feature-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>DSA Special</h3>
+                    <p>Special resources for mastering Data Structures & Algorithms with practice problems and solution guides.</p>
+                </div>
+                <div class="feature-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Previous Year Questions</h3>
+                    <p>Access to past exam papers with detailed solutions to prepare effectively for your exams.</p>
+                </div>
+                <div class="feature-card glass-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Lectures</h3>
+                    <p>Curated video content from top educators to enhance your understanding of complex topics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-green"></div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Academic <span>Subjects</span></h2>
+                <p>Explore our comprehensive collection of subject resources</p>
+            </div>
+            <div class="search-bar glass-card" data-aos="fade-up">
+                <div class="glow"></div>
+                <input type="text" id="subject-search" placeholder="Search for a subject...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="subjects-grid" id="subjects-container">
+                <!-- Subjects will be loaded dynamically from JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading subjects...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DSA Section -->
+    <section id="dsa" class="dsa">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-green"></div>
+        
+        <div class="container">
+            <div class="section-header special-header" data-aos="fade-up">
+                <h2><span>Special</span></h2>
+                <p>Master Data Structures and Algorithms with our special resources</p>
+            </div>
+            <div class="dsa-content">
+                <div class="dsa-image glass-card" data-aos="fade-right">
+                    <div class="glow"></div>
+                    <img src="images/mkc1.png" alt="DSA Illustration">
+                </div>
+                <div class="dsa-text glass-card" data-aos="fade-left">
+                    <div class="glow"></div>
+                    <h3>Why DSA is Important?</h3>
+                    <p>Data Structures and Algorithms form the foundation of computer science and are crucial for problem-solving and efficient programming.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Essential for technical interviews</li>
+                        <li><i class="fas fa-check-circle"></i> Improves problem-solving skills</li>
+                        <li><i class="fas fa-check-circle"></i> Makes your code efficient</li>
+                        <li><i class="fas fa-check-circle"></i> Foundation for advanced topics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" id="show-dsa-resources">
+                        <span>View DSA Resources</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brahmastra Section -->
+    <section id="brahmastra" class="brahmastra">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-green"></div>
+        
+        <div class="container">
+            <div class="section-header brahmastra-header" data-aos="fade-up">
+                <h2><span>Resources</span></h2>
+                <p>The ultimate weapon for academic success</p>
+            </div>
+            <div class="brahmastra-content">
+                <div class="brahmastra-text glass-card" data-aos="fade-right">
+                    <div class="glow"></div>
+                    <h3>What is Brahmastra?</h3>
+                    <p>Brahmastra is our collection of high-impact resources that can transform your academic performance. These carefully curated materials are designed to give you an edge in your studies.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-bolt"></i> Quick revision materials</li>
+                        <li><i class="fas fa-bolt"></i> Important topic summaries</li>
+                        <li><i class="fas fa-bolt"></i> Exam strategy guides</li>
+                        <li><i class="fas fa-bolt"></i> Special cheat sheets</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" id="show-brahmastra-resources">
+                        <span>Access Brahmastra</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="brahmastra-image glass-card" data-aos="fade-left">
+                    <div class="glow"></div>
+                    <img src="images/image.png" alt="Brahmastra Illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Testimonials Section -->
+    <section id="testimonials" class="testimonials-modern">
+        <!-- Floating gradient blobs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Recommended <span>by our members</span></h2>
+                <p>Read about the experiences of students who have used Study Hub to transform their learning journey</p>
+            </div>
+            
+            <div class="testimonials-modern-grid">
+                <!-- Testimonials will be loaded dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Get <span>In Touch</span></h2>
+                <p>We'd love to hear from you! Reach out with any questions or feedback.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info glass-card" data-aos="fade-right">
+                    <div class="glow"></div>
+                    <h3>Contact Information</h3>
+                    <p>Have a question or suggestion? Feel free to reach out to us using any of the methods below.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@studyhub.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>College Campus, Delhi</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form glass-card" data-aos="fade-left">
+                    <div class="glow"></div>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Decorative orbs -->
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about glass-card" data-aos="fade-up">
+                    <div class="glow"></div>
+                    <div class="footer-logo">
+                        <img src="images/mkc.png" alt="Study Hub Logo">
+                    </div>
+                    <p>Study Hub is your academic companion, providing comprehensive resources to help you excel in your studies. Our mission is to make learning accessible, engaging, and effective.</p>
+                </div>
+                
+                <div class="footer-nav glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glow"></div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#dsa">DSA Resources</a></li>
+                        <li><a href="#brahmastra">Brahmastra</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glow"></div>
+                    <h4>Resources</h4>
+                    <ul class="resources-text">
+                        <li>Study Materials</li>
+                        <li>Previous Year Papers</li>
+                        <li>Video Lectures</li>
+                        <li>Practice Problems</li>
+                        <li>Quick Revision Guides</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom glass-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="glow"></div>
+                <p>&copy; 2025 Study Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Subject Details -->
+    <div class="modal" id="subject-modal">
+        <div class="modal-content glass-card">
+            <div class="glow"></div>
+            <span class="close-modal">&times;</span>
+            <div id="modal-subject-content">
+                <!-- Subject details will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+    <script src="js/testimonial-modern.js"></script>
+    <script src="js/genie-animation.js"></script>
+</body>
+</html>

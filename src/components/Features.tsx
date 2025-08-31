@@ -13,7 +13,9 @@ import {
   Phone,
   Star,
   Headphones,
-  Heart
+  Heart,
+  UserCheck,
+  Coffee
 } from 'lucide-react'
 import EventBoard from './EventBoard'
 import MedicalServices from './MedicalServices'
@@ -21,16 +23,22 @@ import FacultyDirectory from './FacultyDirectory'
 import HostelInformation from './HostelInformation'
 import PhoneBook from './PhoneBook'
 import Society from './Society'
+import CRContacts from './CRContacts'
+import CanteenQueue from './CanteenQueue'
 
-const Features = () => {
+interface FeaturesProps {}
+
+const Features: React.FC<FeaturesProps> = () => {
   const [isEventBoardOpen, setIsEventBoardOpen] = useState(false)
   const [isMedicalServicesOpen, setIsMedicalServicesOpen] = useState(false)
   const [isFacultyDirectoryOpen, setIsFacultyDirectoryOpen] = useState(false)
   const [isHostelInformationOpen, setIsHostelInformationOpen] = useState(false)
   const [isPhoneBookOpen, setIsPhoneBookOpen] = useState(false)
   const [isSocietyOpen, setIsSocietyOpen] = useState(false)
+  const [isCRContactsOpen, setIsCRContactsOpen] = useState(false)
+  const [isCanteenQueueOpen, setIsCanteenQueueOpen] = useState(false)
 
-  const features = [
+  const allFeatures = [
     {
       icon: Calendar,
       title: 'Event Board',
@@ -50,14 +58,16 @@ const Features = () => {
       title: 'Campus Navigation',
       description: 'Navigate the campus with ease using our interactive maps. Find classrooms, labs, hostels and important buildings quickly.',
       color: 'from-pink-500 to-red-500',
-      link: 'Explore Campus'
+      link: 'Explore Campus',
+      paused: true
     },
     {
       icon: BookOpen,
       title: 'Study Hub',
       description: 'Access curated study materials, notes, and resources from seniors and faculty. Find everything you need to excel in your academics.',
       color: 'from-green-500 to-green-600',
-      link: 'Explore Resources'
+      link: 'Explore Resources',
+      paused: true
     },
     {
       icon: Users,
@@ -74,13 +84,6 @@ const Features = () => {
       link: 'Hostel Info'
     },
     {
-      icon: Bell,
-      title: 'Smart Notifications',
-      description: 'Receive personalized notifications for exam dates, assignment deadlines, events, and important announcements.',
-      color: 'from-teal-500 to-teal-600',
-      link: 'Manage Alerts'
-    },
-    {
       icon: Clock,
       title: 'Timetable Manager',
       description: 'Create and manage your personalized timetable with class schedules, exam dates, and important deadlines.',
@@ -92,7 +95,8 @@ const Features = () => {
       title: 'Senior Guidance',
       description: 'Connect with seniors for mentorship, career guidance, and academic support across all departments.',
       color: 'from-cyan-500 to-cyan-600',
-      link: 'Find Mentors'
+      link: 'Find Mentors',
+      paused: true
     },
     {
       icon: Heart,
@@ -109,24 +113,33 @@ const Features = () => {
       link: 'View Contacts'
     },
     {
-      icon: Star,
-      title: 'Premium Chat-U',
-      description: 'Get priority support with our premium AI assistant for complex queries and personalized assistance.',
-      color: 'from-gold-500 to-gold-600',
-      link: 'Upgrade Now'
+      icon: UserCheck,
+      title: 'CR Contacts',
+      description: 'Easily connect with your Class Representatives (CRs) for important class announcements, exam updates, and academic support.',
+      color: 'from-teal-500 to-teal-600',
+      link: 'Contact CRs'
     },
     {
-      icon: Headphones,
-      title: 'Voice Assistant',
-      description: 'Use voice commands for hands-free navigation and accessibility. Ask questions naturally in multiple languages.',
-      color: 'from-violet-500 to-violet-600',
-      link: 'Try Voice'
+      icon: Coffee,
+      title: 'Canteen Services',
+      description: 'Explore campus dining options, check real-time queue status, browse menus, and discover the best food across all canteens. Your complete campus dining companion.',
+      color: 'from-orange-500 to-red-500',
+      link: 'Coming Soon',
+      textOnly: true
     }
   ]
 
+  // Filter out paused features
+  const features = allFeatures.filter(feature => !feature.paused)
+
   return (
-    <section id="features" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-16 lg:py-24 bg-black relative overflow-hidden">
+      {/* Floating gradient blobs */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute bottom-0 -right-20 w-72 h-72 bg-purple-600 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-amber-500 rounded-full blur-3xl opacity-15"></div>
+      
+      <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,10 +147,13 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            What we offer
+          <h2 className="tracking-tighter text-white font-sans text-4xl sm:text-5xl md:text-6xl mb-6">
+            What we{' '}
+            <span className="block font-serif text-5xl sm:text-6xl md:text-7xl italic text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+              offer
+            </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="font-sans text-lg font-normal leading-8 text-gray-400 max-w-3xl mx-auto">
             From finding your next class to finding your next project team—we've got everything to help you settle in, grow, and thrive.
           </p>
         </motion.div>
@@ -146,52 +162,75 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="card p-8 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              className={`relative overflow-hidden rounded-2xl border border-white/10 shadow-lg backdrop-blur-xl bg-white/5 group hover:shadow-2xl transition-all duration-300 min-h-[320px] ${
+                feature.textOnly ? 'cursor-default' : 'cursor-pointer'
+              }`}
               onClick={() => {
+                // Don't navigate if it's text only
+                if (feature.textOnly) {
+                  return;
+                }
+                
                 if (feature.title === 'Event Board') {
-                  setIsEventBoardOpen(true)
+                  window.open('/events', '_blank')
                 } else if (feature.title === 'Medical Services') {
-                  setIsMedicalServicesOpen(true)
+                  window.open('/medical', '_blank')
                 } else if (feature.title === 'Faculty Directory') {
-                  setIsFacultyDirectoryOpen(true)
+                  window.open('/faculty', '_blank')
                 } else if (feature.title === 'Hostel Information') {
-                  setIsHostelInformationOpen(true)
+                  window.open('/hostels', '_blank')
                 } else if (feature.title === 'PhoneBook') {
-                  setIsPhoneBookOpen(true)
+                  window.open('/phonebook', '_blank')
                 } else if (feature.title === 'Societies & Clubs') {
-                  setIsSocietyOpen(true)
+                  window.open('/societies', '_blank')
+                } else if (feature.title === 'CR Contacts') {
+                  window.open('/cr-contacts', '_blank')
+                } else if (feature.title === 'Timetable Manager') {
+                  window.open('/timetable', '_blank')
+                } else if (feature.title === 'Campus Navigation') {
+                  window.open('/map', '_blank')
+                } else if (feature.title === 'Study Hub') {
+                  window.open('/study-hub', '_blank')
+                } else if (feature.title === 'Senior Guidance') {
+                  window.open('/launchpad', '_blank')
+                } else if (feature.title === 'Canteen Services') {
+                  window.open('/canteen', '_blank')
                 }
               }}
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-600/20 blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
               
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {feature.description}
-              </p>
-              
-              <motion.button
-                whileHover={{ x: 5 }}
-                className="inline-flex items-center text-gray-800 font-semibold group-hover:text-genie-600 transition-colors duration-300"
-              >
-                {feature.link}
-                <motion.div
-                  className="ml-2 w-6 h-6 rounded-full bg-gray-800 group-hover:bg-genie-600 flex items-center justify-center transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
+              <div className="relative z-10 p-6 sm:p-8">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-md">
+                  {feature.title}
+                </h3>
+                
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                <motion.button
+                  whileHover={{ x: 5 }}
+                  className="inline-flex items-center text-white font-semibold group-hover:text-cyan-400 transition-colors duration-300"
                 >
-                  <div className="w-2 h-2 border-r-2 border-t-2 border-white transform rotate-45"></div>
-                </motion.div>
-              </motion.button>
+                  {feature.link}
+                  <motion.div
+                    className="ml-2 w-6 h-6 rounded-full bg-white/20 group-hover:bg-cyan-400/20 flex items-center justify-center transition-colors duration-300"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <div className="w-2 h-2 border-r-2 border-t-2 border-white transform rotate-45"></div>
+                  </motion.div>
+                </motion.button>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -231,6 +270,18 @@ const Features = () => {
       <Society 
         isOpen={isSocietyOpen} 
         onClose={() => setIsSocietyOpen(false)} 
+      />
+
+      {/* CR Contacts Modal */}
+      <CRContacts 
+        isOpen={isCRContactsOpen} 
+        onClose={() => setIsCRContactsOpen(false)} 
+      />
+
+      {/* Canteen Queue Modal */}
+      <CanteenQueue 
+        isOpen={isCanteenQueueOpen} 
+        onClose={() => setIsCanteenQueueOpen(false)} 
       />
     </section>
   )
